@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muthoot Institute of Technology and Science (MITS)</title>
+    
+    <style>
+        /* Muthoot Color Scheme: RED DOMINANT with Gold accents */
+        :root {
+            --brand-gold: #FFD700;   /* Accent Color */
+            --brand-red: #CC0000;    /* Primary Color - Strong Red */
+            --light-cream: #FDF5E6;  /* Light background for contrast */
+            --dark-text: #2c2c2c;
+        }
+
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #ffffff; 
+            padding: 0; 
+            color: var(--dark-text); 
+            margin: 0; 
+        }
+        
+        /* --- CSS FOR NAVIGATION BAR --- */
+        .navbar {
+            overflow: hidden;
+            background-color: var(--brand-red);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        
+        /* Navigation Links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: var(--brand-gold);
+            color: var(--dark-text);
+        }
+
+        /* The following dropdown CSS is no longer used, but kept for future reference if you decide to re-add it */
+        .dropdown, .dropdown-content, .dropbtn {
+            display: none !important; 
+        }
+        /* --- END CSS FOR NAVIGATION BAR --- */
+
+
+        /* Wrapper for main content to restore padding */
+        .content-wrapper {
+            padding: 20px;
+        }
+        
+        /* HEADER STYLES */
+        .college-header {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 3px solid var(--brand-red);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .college-header img {
+            max-width: 80px; 
+            height: auto;
+            margin-right: 15px;
+            border: 2px solid var(--brand-gold);
+            border-radius: 50%;
+        }
+        .college-header h1 {
+            color: var(--brand-red);
+            margin: 0; 
+            font-size: 2.5em;
+        }
+        
+        /* GENERAL CONTENT STYLES */
+        h3 { 
+            color: var(--brand-red);
+            margin-top: 25px;
+            border-left: 5px solid var(--brand-red);
+            padding-left: 10px;
+            background-color: var(--light-cream);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        /* ABOUT SECTION STYLES */
+        .about-us-box {
+            background-color: var(--light-cream);
+            border: 1px solid var(--brand-red);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Mission and Vision Box Styling */
+        .mv-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; 
+            margin-bottom: 25px;
+        }
+        .mv-box {
+            flex: 1; 
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .mv-box.mission {
+            background-color: #f7f7f7;
+            border-top: 5px solid var(--brand-red); 
+        }
+        .mv-box.vision {
+            background-color: #f7f7f7; 
+            border-top: 5px solid var(--brand-red); 
+        }
+        .mv-box h4 {
+            margin-top: 0;
+            color: var(--brand-red); 
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* DEPARTMENT STYLES */
+        .department-card {
+            background-color: #ffffff; 
+            border: 1px solid #eee; 
+            border-left: 5px solid var(--brand-red); 
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            list-style: none;
+        }
+        .department-card h4 {
+            color: var(--dark-text); 
+            margin-top: 0;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        
+        /* Enhanced Styles for Clickable Cards (LIFT EFFECT) */
+        .department-link {
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .department-link:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .department-link:hover .department-card {
+            background-color: var(--light-cream);
+        }
+
+        /* General text/list styles */
+        p { 
+            line-height: 1.6; 
+            text-align: justify; 
+            margin-bottom: 15px;
+        }
+        
+        /* IMAGE STYLES - RESTORED PLACEMENT */
+        .college-picture {
+            width: 100%; 
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 5px solid var(--brand-red);
+        }
+        
+        /* Contact link color */
+        a {
+            color: var(--brand-red);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--brand-gold);
+        }
+        
+        /* Toned Down Gold Elements */
+        .department-card h4 .gold-star {
+            color: var(--brand-red); 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#top" class="nav-link">Home</a>
+        <a href="#about-us" class="nav-link">About MITS</a>
+        <a href="#departments-section" class="nav-link">Departments Overview</a>
+        <a href="#contact-info" class="nav-link">Contact</a>
+    </nav>
+    <div class="content-wrapper">
+        <a name="top"></a>
+
+        <div class="college-header">
+            <img src="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\logo.jpg" alt="MITS Kochi Logo">
+            <h1>Muthoot Institute of Technology and Science</h1>
+        </div>
+
+        <h3 id="about-us">About Us</h3>
+        <div class="about-us-box">
+            <p>
+                Muthoot Institute of Technology and Science (MITS) is a leading engineering college located in Kochi, Kerala. Established under the Muthoot Group, we are committed to providing quality technical education and fostering innovation. MITS is affiliated with the A P J Abdul Kalam Technological University (KTU) and approved by the AICTE. Our focus is on creating technologically proficient and ethically sound professionals ready to meet global industry challenges.
+            </p>
+            <p>
+                We believe in a holistic approach to education, combining rigorous academic training with extracurricular activities and personality development. Our sprawling campus provides a serene and stimulating environment for learning and growth.
+            </p>
+        </div>
+
+        <div class="mv-section">
+            <div class="mv-box mission">
+                <h4>Mission</h4>
+                <p>
+                    To impart world-class education, promote research and innovation, and produce engineers who are capable of addressing complex technological and societal issues with integrity and competence.
+                </p>
+            </div>
+            <div class="mv-box vision">
+                <h4>Vision</h4>
+                <p>
+                    To evolve into a centre of excellence in engineering education and research, committed to creating future leaders and entrepreneurs who contribute significantly to the technological advancement of the nation.
+                </p>
+            </div>
+        </div>
+
+        <img src="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\mits.jpg"alt="Picture of MITS College Campus" class="college-picture">
+
+        <h3 id="departments-section">Our Academic Departments</h3>
+        
+        <a href="cse.html" class="department-link">
+            <div class="department-card">
+                <h4><span class="gold-star">★</span> Department of Computer Science and Engineering (CS)</h4>
+            </div>
+        </a>
+        <a href="civil.html" class="department-link">
+            <div class="department-card">
+                <h4><span class="gold-star">★</span> Department of Civil Engineering (Civil)</h4>
+            </div>
+        </a>
+        <a href="mech.html" class="department-link">
+            <div class="department-card">
+                <h4><span class="gold-star">★</span> Department of Mechanical Engineering (Mech)</h4>
+            </div>
+        </a>
+        <a href="eee.html" class="department-link">
+            <div class="department-card">
+                <h4><span class="gold-star">★</span> Department of Electrical and Electronics Engineering (EEE)</h4>
+            </div>
+        </a>
+        <a href="mca.html" class="department-link">
+            <div class="department-card">
+                <h4><span class="gold-star">★</span> Department of Computer Applications (MCA)</h4>
+            </div>
+        </a>
+
+        <h3 id="contact-info">Contact Information</h3>
+        <p>
+            **Address:** Muthoot Institute of Technology and Science, Varikoli P.O, Puthencruz, Ernakulam, PIN 682308
+            <br>
+            **Phone:** <span style="color: var(--brand-red);">(0484) 2732100 / 2732111</span><br>
+            **Email:** <a href="mailto:info@mitskochi.edu">info@mitskochi.edu</a>
+        </p>
+        
+        <p>
+            <a href="https://maps.app.goo.gl/aD6KkLukWUKzF1VZ9" target="_blank" style="font-weight: bold; padding: 5px 0;">
+                📍 View Location on Map
+            </a>
+        </p>
+
+    </div> </body>
+</html>

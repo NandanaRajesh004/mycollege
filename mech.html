@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mechanical Engineering - MITS Kochi</title>
+    <style>
+        /* Muthoot Color Scheme: RED DOMINANT with Gold accents */
+        :root {
+            --brand-gold: #FFD700;
+            --brand-red: #CC0000;
+            --light-cream: #FDF5E6;
+            --dark-text: #2c2c2c;
+        }
+
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #ffffff; 
+            padding: 20px; 
+            color: var(--dark-text); 
+        }
+        
+        /* HEADER STYLES */
+        .college-header {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 3px solid var(--brand-red);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .college-header img {
+            max-width: 80px; 
+            height: auto;
+            margin-right: 15px;
+            border: 2px solid var(--brand-gold);
+            border-radius: 50%;
+        }
+        .college-header h1 {
+            color: var(--brand-red);
+            margin: 0; 
+            font-size: 2.5em;
+        }
+        
+        /* GENERAL CONTENT STYLES */
+        h2 {
+            color: var(--brand-red); /* Main department title */
+            border-bottom: 2px solid var(--brand-gold);
+            padding-bottom: 5px;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        h3 { 
+            color: var(--brand-red);
+            margin-top: 25px;
+            border-left: 5px solid var(--brand-red);
+            padding-left: 10px;
+            background-color: var(--light-cream);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+        }
+        ul li::before {
+            content: '»'; /* Custom bullet point */
+            color: var(--brand-red);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* NEW IMAGE STYLE */
+        .department-picture {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover; /* Ensures image covers the area nicely */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 3px solid var(--brand-red);
+        }
+
+        /* NEW MV BOX STYLES (Reused from main page) */
+        .mv-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;  
+            margin-bottom: 25px;
+        }
+        .mv-box {
+            flex: 1;  
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f7f7f7;
+            border-top: 5px solid var(--brand-red); 
+        }
+        .mv-box h4 {
+            margin-top: 0;
+            color: var(--brand-red); 
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        /* General text/list styles */
+        p { 
+            line-height: 1.6; 
+            text-align: justify; 
+            margin-bottom: 15px;
+        }
+        
+        /* Links */
+        a {
+            color: var(--brand-red);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--brand-gold);
+        }
+
+        /* Faculty List Style */
+        .faculty-list {
+            columns: 2; /* Display names in two columns */
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            list-style: disc; /* Use standard bullet for names */
+            color: var(--dark-text);
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="college-header">
+        <img src="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\logo.jpg" alt="MITS Kochi Logo"> 
+        <h1>Muthoot Institute of Technology and Science</h1>
+    </div>
+    
+    <p><a href="index.html">← Back to Main College Info</a></p>
+
+    <h2>Department of Mechanical Engineering</h2>
+
+    <img src="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\mechanical-lab-equipment.jpg"
+        alt="Picture of the Mechanical Engineering Workshop"
+        class="department-picture">
+
+    <h3>Department Overview</h3>
+    <p>
+        The Mechanical Engineering Department focuses on the core principles of design, manufacturing, and maintenance of mechanical systems. We train students in areas ranging from thermodynamics and fluid mechanics to advanced subjects like robotics, CAD/CAM, and additive manufacturing. Our objective is to produce versatile engineers capable of innovating in various sectors, including automotive, aerospace, energy, and heavy machinery.
+    </p>
+
+    <div class="mv-section">
+        <div class="mv-box mission">
+            <h4>Vision</h4>
+            <p>To evolve into a pioneering center for Mechanical Engineering education and research, committed to technological excellence and societal relevance.</p>
+        </div>
+        <div class="mv-box vision">
+            <h4>Mission</h4>
+            <p>To provide high-quality education in thermal, design, and manufacturing domains, promote innovation, and nurture highly skilled, ethically sound mechanical professionals.</p>
+        </div>
+    </div>
+    
+    <h3>Programmes Offered</h3>
+    <ul>
+        <li>B.Tech in Mechanical Engineering</li>
+        <li>M.Tech in Manufacturing Technology</li>
+    </ul>
+
+    <h3>Key Faculty Members</h3>
+    <ul class="faculty-list">
+        <li>Dr. Renjith R. (HOD)</li>
+        <li>Prof. Anil K. Das</li>
+        <li>Dr. Maya S. Kumar</li>
+        <li>Prof. Sudeep M.</li>
+        <li>Dr. Thomas Varghese</li>
+        <li>Prof. Lekshmi N.</li>
+        <li>Prof. Vishnu P. S.</li>
+    </ul>
+
+    <h3>Department Contact</h3>
+    <p>
+        **Office:** Mechanical Engineering Block, Ground Floor, MITS Campus<br>
+        **Phone:** <span style="color: var(--brand-red);">(0484) 2732-401</span><br>
+        **Email:** <a href="mailto:mech_hod@mitskochi.edu">mech_hod@mitskochi.edu</a>
+    </p>
+
+</body>
+</html>
